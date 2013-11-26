@@ -1,0 +1,43 @@
+{
+    "dependencies": [
+        {
+            "interfaces": "pallo\\library\\template\\engine\\EngineModel",
+            "class": "pallo\\application\\template\\engine\\DependencyEngineModel",
+            "id": "dependency"
+        },
+        {
+            "interfaces": "pallo\\library\\template\\theme\\ThemeModel",
+            "class": "pallo\\application\\template\\theme\\DependencyThemeModel",
+            "id": "dependency"
+        },
+        {
+            "class": "pallo\\library\\template\\TemplateFacade",
+            "calls": [
+                {
+                    "method": "setDefaultEngine",
+                    "arguments": [
+                        {
+                            "name": "engine",
+                            "type": "parameter",
+                            "properties": {
+                                "key": "template.engine"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "method": "setDefaultTheme",
+                    "arguments": [
+                        {
+                            "name": "theme",
+                            "type": "parameter",
+                            "properties": {
+                                "key": "template.theme"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

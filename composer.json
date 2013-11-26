@@ -1,0 +1,22 @@
+{
+    "name": "pallo/app-template",
+    "description": "Integration of the template library for a Pallo application.",
+    "license": "MIT",
+    "version": "0.1.0",
+    "authors": [
+        {
+            "name": "Joris Vandeweerd",
+            "email": "joris@statik.be"
+        }
+    ],
+    "require": {
+        "pallo/app": ">=0.4.0",
+        "pallo/lib-dependency": ">=0.5.0",
+        "pallo/lib-template": ">=0.2.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "pallo\\application\\template\\": ["src/", "test/src/"]
+        }
+    }    
+}
