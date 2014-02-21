@@ -1,11 +1,11 @@
 <?php
 
-namespace pallo\application\template\engine;
+namespace ride\application\template\engine;
 
-use pallo\library\dependency\exception\DependencyNotFoundException;
-use pallo\library\dependency\DependencyInjector;
-use pallo\library\template\engine\EngineModel;
-use pallo\library\template\exception\EngineNotFoundException;
+use ride\library\dependency\exception\DependencyNotFoundException;
+use ride\library\dependency\DependencyInjector;
+use ride\library\template\engine\EngineModel;
+use ride\library\template\exception\EngineNotFoundException;
 
 /**
  * Model of the available themes through dependency injection
@@ -14,13 +14,13 @@ class DependencyEngineModel implements EngineModel {
 
     /**
      * Instance of the dependency injector
-     * @var pallo\library\dependency\DependencyInjector
+     * @var ride\library\dependency\DependencyInjector
      */
     protected $dependencyInjector;
 
     /**
      * Constructs a new widget model
-     * @param pallo\library\dependency\DependencyInjector $dependencyInjector
+     * @param ride\library\dependency\DependencyInjector $dependencyInjector
      * @return null
      */
     public function __construct(DependencyInjector $dependencyInjector) {
@@ -31,11 +31,11 @@ class DependencyEngineModel implements EngineModel {
      * Gets a template engine
      * @param string $name Machine name of the template engine
      * @return Theme
-     * @throws pallo\library\template\exception\TemplateEngineNotFoundException
+     * @throws ride\library\template\exception\TemplateEngineNotFoundException
      */
     public function getEngine($name) {
         try {
-            return $this->dependencyInjector->get('pallo\\library\\template\\engine\\Engine', $name);
+            return $this->dependencyInjector->get('ride\\library\\template\\engine\\Engine', $name);
         } catch (DependencyNotFoundException $exception) {
             throw new EngineNotFoundException($name, $exception);
         }
@@ -47,7 +47,7 @@ class DependencyEngineModel implements EngineModel {
      * and an instance of TemplateEngine as value
     */
     public function getEngines() {
-        return $this->dependencyInjector->getAll('pallo\\library\\template\\engine\\Engine');
+        return $this->dependencyInjector->getAll('ride\\library\\template\\engine\\Engine');
     }
 
 }

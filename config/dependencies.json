@@ -1,17 +1,17 @@
 {
     "dependencies": [
         {
-            "interfaces": "pallo\\library\\template\\engine\\EngineModel",
-            "class": "pallo\\application\\template\\engine\\DependencyEngineModel",
+            "interfaces": "ride\\library\\template\\engine\\EngineModel",
+            "class": "ride\\application\\template\\engine\\DependencyEngineModel",
             "id": "dependency"
         },
         {
-            "interfaces": "pallo\\library\\template\\theme\\ThemeModel",
-            "class": "pallo\\application\\template\\theme\\DependencyThemeModel",
+            "interfaces": "ride\\library\\template\\theme\\ThemeModel",
+            "class": "ride\\application\\template\\theme\\DependencyThemeModel",
             "id": "dependency"
         },
         {
-            "class": "pallo\\library\\template\\TemplateFacade",
+            "class": "ride\\library\\template\\TemplateFacade",
             "calls": [
                 {
                     "method": "setDefaultEngine",
