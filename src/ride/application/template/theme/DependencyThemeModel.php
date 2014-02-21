@@ -1,11 +1,11 @@
 <?php
 
-namespace pallo\application\template\theme;
+namespace ride\application\template\theme;
 
-use pallo\library\dependency\exception\DependencyNotFoundException;
-use pallo\library\dependency\DependencyInjector;
-use pallo\library\template\exception\ThemeNotFoundException;
-use pallo\library\template\theme\ThemeModel;
+use ride\library\dependency\exception\DependencyNotFoundException;
+use ride\library\dependency\DependencyInjector;
+use ride\library\template\exception\ThemeNotFoundException;
+use ride\library\template\theme\ThemeModel;
 
 /**
  * Model of the available themes through dependency injection
@@ -14,13 +14,13 @@ class DependencyThemeModel implements ThemeModel {
 
     /**
      * Instance of the dependency injector
-     * @var pallo\library\dependency\DependencyInjector
+     * @var ride\library\dependency\DependencyInjector
      */
     protected $dependencyInjector;
 
     /**
      * Constructs a new widget model
-     * @param pallo\library\dependency\DependencyInjector $dependencyInjector
+     * @param ride\library\dependency\DependencyInjector $dependencyInjector
      * @return null
      */
     public function __construct(DependencyInjector $dependencyInjector) {
@@ -31,11 +31,11 @@ class DependencyThemeModel implements ThemeModel {
      * Gets a theme
      * @param string $name Machine name of the theme
      * @return Theme
-     * @throws pallo\library\template\exception\ThemeNotFoundException
+     * @throws ride\library\template\exception\ThemeNotFoundException
      */
     public function getTheme($name) {
         try {
-            return $this->dependencyInjector->get('pallo\\library\\template\\theme\\Theme', $name);
+            return $this->dependencyInjector->get('ride\\library\\template\\theme\\Theme', $name);
         } catch (DependencyNotFoundException $exception) {
             throw new ThemeNotFoundException($name, $exception);
         }
@@ -47,7 +47,7 @@ class DependencyThemeModel implements ThemeModel {
      * instance of Theme as value
     */
     public function getThemes() {
-        return $this->dependencyInjector->getAll('pallo\\library\\template\\theme\\Theme');
+        return $this->dependencyInjector->getAll('ride\\library\\template\\theme\\Theme');
     }
 
 }
