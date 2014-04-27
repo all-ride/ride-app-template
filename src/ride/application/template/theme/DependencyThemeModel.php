@@ -14,13 +14,13 @@ class DependencyThemeModel implements ThemeModel {
 
     /**
      * Instance of the dependency injector
-     * @var ride\library\dependency\DependencyInjector
+     * @var \ride\library\dependency\DependencyInjector
      */
     protected $dependencyInjector;
 
     /**
      * Constructs a new widget model
-     * @param ride\library\dependency\DependencyInjector $dependencyInjector
+     * @param \ride\library\dependency\DependencyInjector $dependencyInjector
      * @return null
      */
     public function __construct(DependencyInjector $dependencyInjector) {
@@ -31,7 +31,7 @@ class DependencyThemeModel implements ThemeModel {
      * Gets a theme
      * @param string $name Machine name of the theme
      * @return Theme
-     * @throws ride\library\template\exception\ThemeNotFoundException
+     * @throws \ride\library\template\exception\ThemeNotFoundException
      */
     public function getTheme($name) {
         try {

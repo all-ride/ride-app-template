@@ -14,13 +14,13 @@ class DependencyEngineModel implements EngineModel {
 
     /**
      * Instance of the dependency injector
-     * @var ride\library\dependency\DependencyInjector
+     * @var \ride\library\dependency\DependencyInjector
      */
     protected $dependencyInjector;
 
     /**
      * Constructs a new widget model
-     * @param ride\library\dependency\DependencyInjector $dependencyInjector
+     * @param \ride\library\dependency\DependencyInjector $dependencyInjector
      * @return null
      */
     public function __construct(DependencyInjector $dependencyInjector) {
@@ -31,7 +31,7 @@ class DependencyEngineModel implements EngineModel {
      * Gets a template engine
      * @param string $name Machine name of the template engine
      * @return Theme
-     * @throws ride\library\template\exception\TemplateEngineNotFoundException
+     * @throws \ride\library\template\exception\TemplateEngineNotFoundException
      */
     public function getEngine($name) {
         try {
