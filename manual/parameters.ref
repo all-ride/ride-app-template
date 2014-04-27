@@ -1,0 +1,2 @@
+template.engine         Machine name of the default template engine
+template.theme          Machine name of the default theme
