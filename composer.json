@@ -15,7 +15,8 @@
     },
     "autoload": {
         "psr-0": {
-            "ride\\application\\template\\": ["src/"]
+            "ride\\application\\template\\": ["src/"],
+            "ride\\service\\TemplateService": ["src/"]
         }
     }
 }
