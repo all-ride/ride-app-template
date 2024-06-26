@@ -1,4 +1,5 @@
 {
+    "version": "1.2.0",
     "name": "ride/app-template",
     "description": "Integration of the template library for a Ride application.",
     "license": "MIT",

@@ -11,6 +11,8 @@ use ride\library\template\Template;
  */
 class TemplateService {
 
+    protected $templateFacade;
+
     /**
      * Constructs a new template service
      * @param \ride\library\template\TemplateFacade $templateFacade
