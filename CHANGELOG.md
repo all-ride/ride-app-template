@@ -1,3 +1,6 @@
+## [1.2.0] - 2024-06-26
+### Updated
+- Update to be compatible with php 8.3
 ## [1.1.0] - 2017-08-01
 ### Added
 - default template service
